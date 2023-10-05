@@ -1,0 +1,568 @@
+@import url('https://fonts.googleapis.com/css2?family=Kalam:wght@700&family=Merriweather:ital@1&family=Roboto:wght@400;500&family=Rubik:wght@300;400&display=swap');
+*{
+    margin: 0;
+    padding: 0;
+    scroll-behavior: smooth;
+    font-family: sans-serif;
+}
+
+body{
+    overflow-y: scroll;
+    overflow-x: hidden;
+}
+i{
+    color: black;
+}
+a{
+ text-decoration: none;
+ color: blue;
+}
+h4{
+    color: white;
+    font-weight: 750;
+    font-size: 1.2rem;
+}
+h1{
+    font-size: 1.6rem;
+}
+hr{
+    position: relative;
+    top: 50px;
+    opacity: 0.2;
+    width: 98vh;
+}
+h2{
+    position: relative;
+    top: 20px;
+    left: 10px;
+    font-size: 1.8rem;
+}
+.background{
+    background-color: white;
+    position: absolute;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    top: 0;
+    left: 0;
+    width: 100%;
+}
+.background .container{
+    width: auto;
+    height: auto;
+}
+/* ::-webkit-scrollbar{
+    width: 15px;
+}
+::-webkit-scrollbar-track{
+    background:hsl(260deg 11% 85% / 94%);
+}
+::-webkit-scrollbar-thumb{
+    background: transparent;
+    border-radius: 5px;
+}
+.left-navbar:hover::-webkit-scrollbar-thumb{
+    background: #474747;
+}
+::-webkit-scrollbar-thumb:hover{
+    background-color: #b1afaf;
+} */
+
+    /*  left navbar start here */
+.logo{
+    position: relative;
+    left: 20px;
+    top: 10px;
+}
+.logo-img{
+    position: absolute;
+    left: 20px;
+    top: 10px;
+}
+.logo-img a img{
+    position: relative;
+    left: 37px;
+    top: 5px;
+    width: auto;
+    height: 35px;
+}
+.left-navbar{
+    display: flex;
+    position: fixed;
+    height: calc(108vh - 60px);
+}
+.list-item{
+    overflow-y: scroll;
+    overflow-x:hidden ;
+    background-color: white;
+    width: 358px;
+    margin: -5px -15px;
+}
+
+.list-item a{
+    display: flex;
+    align-items: center;
+    text-decoration: none;
+    font-size: 1.4rem;
+    position: relative;
+    left: 59px;
+    height: 60px;
+    border-radius: 50px;
+    top: 69px;
+    width: 27vh;
+    padding: 0px 20px;
+    transition: all ease 0.3s;
+}
+.list-item a:hover{
+    background-color: rgb(216, 215, 215);;
+}
+.list-item a p{
+    text-decoration: none;
+    color: black;
+    font-weight: 100;
+    position: relative;
+    left: 25px;
+}
+.post-btn{
+    position: relative;
+    left: 65px;
+    top: 71px;
+    margin: 0px -6px;
+}
+.post-btn button{
+    width: 240px;
+    height: 58px;
+    border-radius: 50px;
+    border: none;
+    
+    background-color: rgb(29, 155, 240);
+}
+.list-item .profile{
+    position: relative;
+    top: 75px;
+    height: 100px;
+    display: flex;
+}
+.list-item .profile a{
+    display: flex;
+    align-items: center;
+    text-decoration: none;
+    font-size: 1.4rem;
+    position: relative;
+    left: 59px;
+    height: 60px;
+    border-radius: 50px;
+    top: 0;
+    width: 27vh;
+    padding: 0px 20px;
+    transition: all ease 0.3s;
+}
+.profile a img{
+    border-radius: 50%;
+    background-size: cover;
+    width: auto;
+    height: 45px;
+}
+.profile a h4{
+    font-size: 1.5rem;
+    position: relative;
+    left: 3px;
+    color: black;
+}
+.profile a h5{
+    position: absolute;
+    top: 6vh;
+    left: 9.5vh;
+    font-weight: 100;
+    font-size: 1rem;
+    color: #808080f0;
+}
+ @media only screen and (max-width: 768px) {
+    
+}
+/* Middle list start here */
+
+.middle-list{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    left: 22.8%;
+    width: 47.5%;
+    border-right: 1px solid #80808054;
+}
+.middle-list header{
+    width: 100%;
+    left: 0;
+    background-color: white;
+    position: relative;
+}
+.fixed{
+    width: 47.35%;
+    height: 18.5vh;
+    position: fixed;
+    z-index: 9999;
+    left: 47.5vh;
+    background-color: white;
+}
+.only-h1{
+    display: flex;
+    position: relative;
+    top: 51px;
+}
+.only-h1 h1{
+    font-weight: 100;
+    font-size: 1.4rem;
+    width: 50%;
+    display: flex;
+    height: 50px;
+    align-items: center;
+    justify-content: center;
+    transition: 0.5s ease;
+}
+.two-option h1:hover{
+    background-color: rgb(216, 215, 215);
+}
+
+.content{
+    position: relative;
+    top: 18vh;
+    left: 5px;
+    width:98.5vh ;
+    margin-bottom: 23vh;
+  }
+.content a img{
+    width: 45px;
+    height: 45px;
+    border-radius: 50%;
+    background-size: cover;
+}
+.content a input{
+    width: 90%;
+    height: 100px;
+    font-size: 1.4rem;
+    border: none;
+    text-decoration: none;
+    position: relative;
+    top: -11px;
+    outline: none;
+}
+.icons{
+    display: flex;
+    position: relative;
+    left: 50px;
+    bottom: 20px;
+}
+.icons i{
+    margin: 12px;
+    font-size: 1.1rem;
+    color: rgb(29 155 240 / 76%);
+}
+.icons button{
+    width: 70px;
+    height: 35px;
+    position: relative;
+    float: right;
+    left: 35%;
+    background-color: rgb(29 155 240 / 50%);
+    border-radius: 50px;
+    border: none;
+}
+.tweet{
+    position: relative;
+    top: 0;
+    height: auto;
+}
+.tweet-content{
+    padding: 20px 20px;
+    transition: 0.3s ease;
+    cursor: pointer;
+}
+.tweet-content:hover{
+    background-color: rgb(247, 249, 249);
+}
+.user-details{
+    width: 73vh;
+    position: relative;
+    height: auto;
+    left: 50px;
+    top: -10px;
+}
+.user-title{
+    display: flex;
+    position: relative;
+    bottom: 6vh;
+    left: -10px;
+}
+.user-title h2 a i{
+    font-size: 1rem;
+    color: blue;
+}
+.user-title button a{
+    text-decoration: none;
+    color: black;
+}
+.tweet-content img{
+    width: auto;
+    height: 43px;
+    border-radius: 50px;
+}
+.user-details h2{
+    position: relative;
+    top: 6px;
+    left: 10px;
+    font-size: 1.5rem;
+}
+.user-details article{
+    position: relative;
+    top: 10px;
+    left: 20px;
+    font-size: 1.2rem;
+}
+.user-details button{
+    position: absolute;
+    right: 0;
+    top: -36px;
+    background: none;
+    font-size: 1.5rem;
+    border: none;
+}
+.user-details p{
+    position: relative;
+    top: -30px;
+    font-size: 1.2rem;
+}
+.user-details img{
+    width: 85%;
+    height: auto;
+    background-size: cover;
+    border-radius: 0;
+    border-radius: 15px;
+}
+.likes-icons{
+    display: flex;
+    justify-content: center;
+    font-size: 1.3rem;
+    }
+.likes-icons a{
+    text-decoration: none;
+    margin: 10px 25px;
+    display: flex;
+    font-size: 1.2rem;
+    color: gray;
+}
+.likes-icons a i{
+    position: relative;
+    top: 3px;
+    padding: 0px 5px;
+    color: gray;
+}
+/* right div start here */
+
+.right-list{
+    display: flex;
+    align-items: center;
+    position: absolute;
+    left: 71%;
+    width: 47vh;
+    height: 100vh;
+    right: 0;
+}
+.right-list header{
+    height: 100vh;
+    width: 40%;
+    background-color: white;
+}
+.search 
+{
+    z-index: 9999;
+    position: fixed;
+    height: 80px;
+    width: 61vh;
+    right: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: white;
+}
+.search input{
+    width: 18.5vw;
+    height: 45px;
+    position: relative;
+    top: 0px;
+    border-radius: 50px;
+    left: -14px;
+    font-size: 1.2rem;
+    padding: 0px 55px;
+    background-color: rgb(247, 249, 249);
+    border: none;
+    outline: none;
+}
+.search i{
+    position: absolute;
+    left: 6%;
+    top: 30px;
+    font-size: 1.2rem;
+}
+.subscribe{
+    width: 50vh;
+    position: relative;
+    left: 0%;
+    top: 15vh;
+    border: 0px solid black;
+    padding: 10px 19px;
+    height: 22%;
+    border-radius: 25px;
+    background-color: rgb(247, 249, 249);
+}
+.subscribe h1{
+    font-size: 1.6rem;
+    margin-bottom: 13px;
+}
+.subscribe p{
+    font-size: 1.1rem;
+    font-weight: 700;
+}
+.subscribe button{
+    cursor: pointer;
+    width: 35%;
+    height: 40px;
+    border-radius: 50px;
+    font-size: medium;
+    font-weight: 800;
+    position: relative;
+    top: 7%;
+    background-color: black;
+    color: white;
+
+}
+.trending{
+    cursor: pointer;
+    width: 50vh;
+    position: relative;
+    left: 0;
+    top: 20vh;
+    border: 0px solid black;
+    padding: 10px 19px;
+    height:75%;
+    border-radius: 25px;
+    background-color: rgb(247, 249, 249);
+}
+.trending-content{
+    width: 111.5%;
+    position: relative;
+    left: -20px;
+    top: 15px;
+    height: 15%;
+
+}
+.inner-content{
+    padding: 10px;
+}
+.inner-content h3{
+    font-size: 1.1rem;
+    font-weight: 100;
+    color: gray;
+}
+.inner-content h2{
+    position: unset;
+    font-size: 1.3rem;
+}
+.inner-content h3 a i{
+    float: right;
+    font-size: 1.5rem;
+}
+.follow{
+    cursor: pointer;
+    width: 50vh;
+    position: relative;
+    left: 0;
+    top: 26vh;
+    padding: 10px 19px;
+    height: 70%;
+    border-radius: 25px;
+    background-color: rgb(247, 249, 249);
+}
+
+.inner-follow{
+    width: 111.5%;
+    position: relative;
+    left: -20px;
+    top: 15px;
+    display: flex;
+    padding: 0px 8px;
+}
+.inner-follow img{
+    width: auto;
+    height: 35px;
+    border-radius: 50px;
+    padding: 0px 10px;
+}
+.inner-follow h2{
+    position: unset;
+    font-size: 1.2rem;
+}
+.inner-follow h2 article{
+    font-size: 1rem;
+    font-size: 1rem;
+    font-weight: 100;
+    color: gray;
+}
+ .follow button{
+    float: right;
+    width: 90px;
+    height: 37px;
+    position: relative;
+    border-radius: 30px;
+    bottom: 21px;
+    background-color: black;
+    color: white;
+    font-size: medium;
+    font-weight: 800;
+}
+.terms{
+    width: 50vh;
+    position: relative;
+    left: 0;
+    top: 30vh;
+    padding: 10px 19px;
+    height: 15%;
+    border-radius: 25px;
+    background-color: rgb(247, 249, 249);
+}
+.terms p{
+    font-size: 1.2rem;
+    word-spacing: 3px;
+}
+@media only screen and (max-width: 412px) {
+    /* For mobile phones: */
+    .right-list {
+      display: none;
+    }
+    .left-navbar{
+        display: none;
+    }
+    .middle-list{
+        left: 0;
+    }
+    .icons button{
+        left: 10%;
+    }
+    .fixed{
+        left: 0;
+        width: 53%;
+    }
+    .tweet-content{
+        padding: 20px 0px;
+    }
+    .user-details{
+        width: 49vh;
+    }
+    .user-details img{
+        width: 88%;
+    }
+    .user-details button{
+        right: 15px;
+        top: -50px;
+    }
+  }
