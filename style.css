@@ -13,6 +13,10 @@ body{
 i{
     color: black;
 }
+/* i:hover{
+    background: #c0c7c9b2;
+    border-radius: 50px;
+} */
 a{
  text-decoration: none;
  color: blue;
@@ -47,26 +51,30 @@ h2{
     left: 0;
     width: 100%;
 }
+.background.login_box{
+    filter: blur(20px);
+    user-select: none;
+}
 .background .container{
     width: auto;
     height: auto;
 }
-/* ::-webkit-scrollbar{
+html::-webkit-scrollbar{
     width: 15px;
 }
-::-webkit-scrollbar-track{
+html::-webkit-scrollbar-track{
     background:hsl(260deg 11% 85% / 94%);
 }
-::-webkit-scrollbar-thumb{
+html::-webkit-scrollbar-thumb{
     background: transparent;
-    border-radius: 5px;
+    border-radius: 10px;
 }
-.left-navbar:hover::-webkit-scrollbar-thumb{
-    background: #474747;
-}
-::-webkit-scrollbar-thumb:hover{
+html:hover::-webkit-scrollbar-thumb{
     background-color: #b1afaf;
-} */
+}
+html::-webkit-scrollbar-thumb:hover{
+    background:linear-gradient(rgb(248, 10, 10),rgb(223, 223, 25),rgb(8, 158, 8));
+}
 
     /*  left navbar start here */
 .logo{
@@ -116,6 +124,55 @@ h2{
 .list-item a:hover{
     background-color: rgb(216, 215, 215);;
 }
+/* the left div see more icon scripting start here */
+.see-more-popup.show{
+    position: absolute;
+    left: 30px;
+    top: 30%;
+    width: 24%;
+    height: auto;
+    background: white;
+    border-radius: 15px;
+    box-shadow: 0px 0px 0.2rem;
+    border: none;
+}
+.see-more-popup.show .see-header{
+    margin-bottom: 16px;
+
+}
+.see-more-popup.show .see-header h1{
+    width: auto;
+    height: 35px;
+    padding: 10px 0px 10px 15px;
+}
+.see-more-popup.show .see-header h1:hover{
+    background-color: whitesmoke;
+}
+.see-more-popup.show .see-header hr{
+    position: relative;
+    top: 10px;
+    width: 90%;
+    left: 5%;
+    opacity: 0.2;
+}
+.see-more-popup.show .see-header h1 i{
+    padding-right: 25px;
+}
+.see-more-popup.show .see-footer{
+}
+.see-more-popup.show .see-footer h3{
+    width: auto;
+    height: 30px;
+    padding: 21px 0px 10px 15px;
+}
+.see-more-popup.show .see-footer h3:hover{
+    background-color: whitesmoke;
+}
+.see-more-popup.show .see-footer h3 i{
+    float: right;
+    padding-right: 15px;
+}
+/* and end here  */
 .list-item a p{
     text-decoration: none;
     color: black;
@@ -142,6 +199,10 @@ h2{
     top: 75px;
     height: 100px;
     display: flex;
+}
+.list-item .profile:hover{
+    background-color: rgb(216, 215, 215);;
+
 }
 .list-item .profile a{
     display: flex;
@@ -177,9 +238,144 @@ h2{
     font-size: 1rem;
     color: #808080f0;
 }
- @media only screen and (max-width: 768px) {
-    
+/* profle scripting start here */
+.popup-profile.open_profile{
+    width: 35vh;
+    background: white;
+    height: 10vh;
+    position: fixed;
+    box-shadow: 0 0 0.3rem;
+    left: 9vh;    
+    bottom: 8vh;
+    display: block;
+    border-radius: 10px;
 }
+.popup-profile.open_profile .upper_profile{
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    height: 50%;
+    text-align: center;
+    background-color: white;
+    border-radius: 10px 10px 0 0;
+}
+.popup-profile.open_profile .upper_profile span{
+    position: relative;
+    top: 6px;
+    font-size: 1.1rem;
+    cursor: pointer;
+}
+.popup-profile.open_profile .upper_profile:hover{
+    background-color: rgb(226, 228, 228);
+
+}
+.popup-profile.open_profile .lower_profile{
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    height: 50%;
+    text-align: center;
+    background: white;
+    border-radius: 0px 0px 10px 10px;
+}
+.popup-profile.open_profile .lower_profile span{
+    position: relative;
+    top: 6px;
+    font-size: 1.1rem;
+    cursor: pointer;
+}
+.popup-profile.open_profile .lower_profile:hover{
+    background-color: rgb(226, 228, 228);
+
+}
+/* profile scripting end here */
+.login.login_box .background{
+    filter: blur(20px);
+}
+/* login scripting start here */
+.login.login_box{
+    position: absolute;
+    left: 29%;
+    z-index: 9999;
+    width: 43%;
+    height: 90vh;
+    text-align: center;
+    background-color: white;
+    border-radius: 25px;
+    box-shadow: 0 0 0.3rem;
+ }
+ .login.login_box .logo-part{
+    font-size: 2.5rem;
+ }
+ .login.login_box .login-container h1{
+    position: relative;
+    top: 20px;
+    right: 8vh;
+    font-size: 2.2rem;
+    font-weight: 500;
+ }
+ .login.login_box .login-container .login-details{
+    margin: 50px;
+ }
+ .login.login_box .login-container .login-details .upper-part{
+    border-bottom: 0.5px solid gray;
+    width: 45vh;
+    position: relative;
+    left: 20%; }
+ .login.login_box .login-container .login-details .upper-part span{
+    border-radius: 40px;
+    border: 0.5px solid gainsboro ;
+    width: 45vh;
+    height: 50px;
+    position: relative;
+    display: flex;
+    font-size: 1.4rem;
+    left: 0;
+    justify-content: center;
+    align-items: center;
+    margin: 5px 0px;
+    cursor: pointer;
+ }
+ .login.login_box .login-container .login-details .upper-part span img{
+    width: 10%;
+    height: auto;
+    position: relative;
+    background-size: cover;
+    right: 17px;
+ }
+ .login.login_box .login-container .login-details .upper-part p{
+    position: relative;
+    top: 9px;
+    background: white;
+    width: 26px;
+    left: 45%;
+ }
+ .login.login_box .login-container .login-details .lower-part{
+    margin: 35px;
+ }
+ .login.login_box .login-container .login-details .lower-part input{
+    width: 45vh;
+    height: 55px;
+    font-size: 1.3rem;
+    border: 0.5px solid gainsboro ;
+    outline: none;
+ }
+ .login.login_box .login-container .login-details .lower-part button{
+    width: 45vh;
+    height: 40px;
+    margin: 15px;
+    position: relative;
+    top: 15px;
+    border-radius: 40px;
+    font-size: 1.4rem;
+    border: 0.5px solid gainsboro ;
+    cursor: pointer;
+ }
+ .login.login_box .login-container .login-details .lower-part button:hover{
+    background-color: rgb(1, 12, 12);
+ }
+ /* login scripting end here */
+
 /* Middle list start here */
 
 .middle-list{
@@ -209,6 +405,7 @@ h2{
     display: flex;
     position: relative;
     top: 51px;
+    cursor: pointer;
 }
 .only-h1 h1{
     font-weight: 100;
@@ -219,6 +416,15 @@ h2{
     align-items: center;
     justify-content: center;
     transition: 0.5s ease;
+}
+.only-h1 h1 a{
+    border-bottom: 1px solid rgb(29 155 240 / 81%);
+    height: 36px;
+    position: relative;
+    top: 5px;
+    border-width: 5px;
+    text-decoration: none;
+    color: black;
 }
 .two-option h1:hover{
     background-color: rgb(216, 215, 215);
@@ -264,6 +470,8 @@ h2{
     position: relative;
     float: right;
     left: 35%;
+    color: white;
+    font-weight: 900;
     background-color: rgb(29 155 240 / 50%);
     border-radius: 50px;
     border: none;
@@ -304,15 +512,179 @@ h2{
 }
 .tweet-content img{
     width: auto;
-    height: 43px;
+    height: 45px;
     border-radius: 50px;
 }
 .user-details h2{
     position: relative;
-    top: 6px;
+    top: 10px;
     left: 10px;
-    font-size: 1.5rem;
+    letter-spacing: -1px;
+    font-size: 1.1rem;
+    font-style: italic;
 }
+.user-details h2:hover{
+    text-decoration: underline;
+}
+/* account name javascripting start here */
+.account_name.box{
+    margin: 45px 0px;
+    width: 20%;
+    height: auto;
+    position: absolute;
+    left: 23%;
+    background: white;
+    padding: 10px;
+    border-radius: 15px;
+    box-shadow: 0px 0px 0.5rem black;
+}
+.account_name.box .profile-picture{
+    display: flex;
+}
+.account_name.box .profile-picture img{
+    border-radius: 50px;
+    height: auto;
+    width: 65px;
+    cursor: pointer;
+}
+.account_name.box .profile-picture button{
+    position: sticky;
+    left: 45%;
+    height: 40px;
+    width: 13vh;
+    border-radius: 50px;
+    background: black;
+    color: white;
+    font-weight: 900;
+    cursor: pointer;
+}
+.account_name.box .id-details p{
+    margin: 20px 0px;
+    font-size: 1.1rem;
+    font-style: normal;
+}
+.account_name.box .followers{
+    display: flex;
+    margin: 10px 0px;
+}
+.account_name.box .followers a{
+    display: flex;
+    width: 50vh;
+    font-size: 1.1rem;
+    color: black;
+    font-weight: 600;
+    cursor: pointer;
+}
+.account_name.box .followers a p {
+        padding: 0px 3px;
+        font-size: 1.1rem;
+        font-weight: 100;
+        color: #656363;
+        position: relative;
+        font-stretch: condensed;
+        bottom: 2px;
+}
+.account_name.box h3:hover{
+    text-decoration: underline;
+}
+.account_name.box a:hover{
+    text-decoration: underline;
+}
+
+/*  for elvish  */
+
+.account_name-e.box2{
+    margin: 45px 0px;
+    width: 20%;
+    height: auto;
+    position: absolute;
+    left: 23%;
+    top: 163%;
+    background: white;
+    padding: 10px;
+    border-radius: 15px;
+    box-shadow: 0px 0px 0.5rem black;
+}
+.account_name-e.box2 .profile-picture-e{
+    display: flex;
+}
+.account_name-e.box2 .profile-picture-e img{
+    border-radius: 50px;
+    height: auto;
+    width: 65px;
+    cursor: pointer;
+}
+.account_name-e.box2 .profile-picture-e button{
+    position: sticky;
+    left: 45%;
+    height: 40px;
+    width: 13vh;
+    border-radius: 50px;
+    background: black;
+    color: white;
+    font-weight: 900;
+    cursor: pointer;
+}
+.account_name-e.box2 .id-details-e p{
+    margin: 20px 0px;
+    font-size: 1.1rem;
+    font-style: normal;
+}
+.account_name-e.box2 .followers-e{
+    display: flex;
+    margin: 10px 0px;
+}
+.account_name-e.box2 .followers-e a{
+    display: flex;
+    width: 50vh;
+    font-size: 1.1rem;
+    color: black;
+    font-weight: 600;
+    cursor: pointer;
+}
+.account_name-e.box2 .followers-e a p {
+        padding: 0px 3px;
+        font-size: 1.1rem;
+        font-weight: 100;
+        color: #656363;
+        position: relative;
+        font-stretch: condensed;
+        bottom: 2px;
+}
+.account_name-e.box2 h3:hover{
+    text-decoration: underline;
+}
+.account_name-e.box2 a:hover{
+    text-decoration: underline;
+}
+/* the account scripting end here */
+/* account 3 dot icon scripting start here */
+.account3-dot.open{
+    position: absolute;
+    top: 22vw;
+    box-shadow: 0px 0px 0.5rem black;
+    left: 42%;
+    background: white;
+    width: 25%;
+    height: auto;
+    border-radius: 15px;
+}
+.account3-dot.open h4{
+    color: black;
+    font-size: 1rem;
+    height: 1vw;
+    padding: 17px 20px;
+}
+.account3-dot.open h4:hover{
+    background-color: rgb(216, 215, 215);
+
+}
+.account3-dot.open h4 i{
+    position: relative;
+    right: 5px;
+}
+/* account 3 dot icon scripting end here */
+
 .user-details article{
     position: relative;
     top: 10px;
@@ -326,6 +698,7 @@ h2{
     background: none;
     font-size: 1.5rem;
     border: none;
+    right: -4vw;
 }
 .user-details p{
     position: relative;
@@ -350,11 +723,13 @@ h2{
     display: flex;
     font-size: 1.2rem;
     color: gray;
+    position: relative;
+    left: 40px;
 }
 .likes-icons a i{
     position: relative;
     top: 3px;
-    padding: 0px 5px;
+    padding: 0px 15px;
     color: gray;
 }
 /* right div start here */
@@ -363,14 +738,11 @@ h2{
     display: flex;
     align-items: center;
     position: absolute;
-    left: 71%;
-    width: 47vh;
     height: 100vh;
-    right: 0;
+    right: 7vh;
 }
 .right-list header{
     height: 100vh;
-    width: 40%;
     background-color: white;
 }
 .search 
@@ -405,10 +777,10 @@ h2{
     font-size: 1.2rem;
 }
 .subscribe{
-    width: 50vh;
+    width: 46vh;
     position: relative;
     left: 0%;
-    top: 15vh;
+    top: 11vh;
     border: 0px solid black;
     padding: 10px 19px;
     height: 22%;
@@ -434,17 +806,98 @@ h2{
     top: 7%;
     background-color: black;
     color: white;
-
 }
+/* subscribe script start here */
+.subscribe-c.subscribe-tab{
+    width: 37%;
+    left: 28%;
+    position: absolute;
+    background: white;
+    z-index: 9999;
+    top: 8vh;
+    height: 31vw;
+    padding: 80px 70px;
+    border-radius: 20px;
+    box-shadow: 0px 0px 0.6rem black;
+}
+.subscribe-c.subscribe-tab .headig{
+    text-align: center;
+}
+.subscribe-c.subscribe-tab h5{
+    font-weight: 100;
+    position: relative;
+    top: 15px;
+    font-size: 1.1vw;
+}
+.subscribe-c.subscribe-tab .boxes{
+    display: flex;
+    margin: 8vh 0px;
+    position: relative;
+    left: 30px;
+}
+.subscribe-c.subscribe-tab span{
+    position: relative;
+    bottom: 10px;
+    color: #575555;
+}
+.subscribe-c.subscribe-tab .boxes h2{
+    position: unset;
+    font-size: 1.4rem;
+}
+.subscribe-c.subscribe-tab .boxes .box1{
+    box-shadow: 0px 0px 0.4rem black;
+    width: 30vh;
+    height: auto;
+    position: relative;
+    right: 15px;
+    padding: 30px 20px;
+    border-radius: 15px;
+}
+.subscribe-c.subscribe-tab .boxes .box1:hover{
+    border: 0.5px solid blue;
+    background-color:whitesmoke;
+}
+.subscribe-c.subscribe-tab .boxes .box2{
+    box-shadow: 0px 0px 0.4rem black;
+    width: 30vh;
+    height: auto;
+    position: relative;
+    left : 10px;
+    padding: 30px 20px;
+    border-radius: 15px;
+}
+.subscribe-c.subscribe-tab .boxes .box2:hover{
+    border: 0.5px solid blue;
+    background-color:whitesmoke;
+}
+.subscribe-c.subscribe-tab button{
+    width: 100%;
+    height: 3.7vw;
+    border-radius: 50px;
+    font-size: 1.1rem;
+    font-weight: 700;
+    background: black;
+    color: white;
+}
+.subscribe-c.subscribe-tab .btn .about{
+    text-align: center;
+    margin-top: 25px;
+    font-size: 1.1vw;
+}
+.subscribe-c.subscribe-tab p{
+    margin-top: 10px;
+    color: #575555;
+}
+/* subscribe script end here */
 .trending{
     cursor: pointer;
-    width: 50vh;
+    width: 46vh;
     position: relative;
     left: 0;
-    top: 20vh;
+    top: 15vh;
     border: 0px solid black;
     padding: 10px 19px;
-    height:75%;
+    height:auto;
     border-radius: 25px;
     background-color: rgb(247, 249, 249);
 }
@@ -454,8 +907,58 @@ h2{
     left: -20px;
     top: 15px;
     height: 15%;
-
 }
+/* Java script start here */
+.popup.open{
+    width: 40vh;
+    background: white;
+    height: 10vh;
+    border: 1px solid;
+    position: absolute;
+    right: 9vh;
+    bottom: 22vh;
+    display: block;
+    border-radius: 10px;
+}
+.popup.open .upper{
+    display: flex;
+    width: 95.5%;
+    height: 50%;
+    padding: 0px 6px;
+    text-align: center;
+    background-color: white;
+    border-radius: 10px 10px 0 0;
+}
+.popup.open .upper:hover{
+    background-color: rgb(226, 228, 228);
+}
+.popup.open .upper span{
+    position: relative;
+    top: 6px;
+    font-size: 1.1rem;
+    cursor: pointer;
+}
+.popup.open .lower{
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    height: 50%;
+    text-align: center;
+    background:white ;
+    border-radius: 0px 0px 10px 10px;
+}
+.popup.open .lower:hover{
+    background-color: rgb(226, 228, 228);
+}
+.popup.open .lower span{
+    position: relative;
+    top: 6px;
+    font-size: 1.1rem;
+    cursor: pointer;
+}
+/* the close script start here */
+   
+/* Javascript end here */
 .inner-content{
     padding: 10px;
 }
@@ -471,13 +974,23 @@ h2{
 .inner-content h3 a i{
     float: right;
     font-size: 1.5rem;
+    width: 30px;
+    height: 30px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: 0.3s ease;
 }
+/* .inner-content h3 a i:hover{
+    background: #add8e685;
+    border-radius: 50px;
+} */
 .follow{
     cursor: pointer;
-    width: 50vh;
+    width: 46vh;
     position: relative;
     left: 0;
-    top: 26vh;
+    top: 19vh;
     padding: 10px 19px;
     height: 70%;
     border-radius: 25px;
@@ -519,12 +1032,64 @@ h2{
     color: white;
     font-size: medium;
     font-weight: 800;
+    cursor: pointer;
 }
+/*follow button Scripting start here */
+.follow_me.deco{
+    background-color:white;
+    color: black;
+    width: 14vh;
+    border: none;
+    box-shadow: 0px 0px 0.5rem black ;
+}
+.follow_me.deco:hover{
+    background-color: rgba(255, 173, 173, 0.342);
+    color: rgba(255, 0, 0, 0.685);;
+}
+/* unfollow scripting */
+.right-follow.try-unfollow{
+    width: 18%;
+    height: auto;
+    position: absolute;
+    background: white;
+    left: 35%;
+    padding: 30px;
+    border-radius: 25px;
+    top: 107%;
+    box-shadow: 0px 0px 0.5rem black;
+}
+.right-follow.try-unfollow .heading{
+    position: relative;
+    bottom: 15px;
+}
+.right-follow.try-unfollow .paragraph{
+    font-size: 1.1vw;
+    color: #4e4d4de0;
+    margin-bottom: 30px;
+}
+.right-follow.try-unfollow .btn{
+    display: grid;
+    position: relative;
+    bottom: 15px;
+}
+.right-follow.try-unfollow button{
+    height: 50px;
+    margin: 5px 0px;
+    border-radius: 40px;
+    font-size: 1.1vw;
+    background: white;
+    font-weight: 900;
+}
+.right-follow.try-unfollow #unfollow{
+    background-color: black;
+    color: white;
+}
+/* scripting end here */
 .terms{
-    width: 50vh;
+    width: 46vh;
     position: relative;
     left: 0;
-    top: 30vh;
+    top: 22vh;
     padding: 10px 19px;
     height: 15%;
     border-radius: 25px;
